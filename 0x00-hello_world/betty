@@ -1,0 +1,3 @@
+#!/bin/bash
+betty-doc.pl 41
+betty-style.pL $!
