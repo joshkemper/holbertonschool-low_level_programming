@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdio.h>
+void printstring (char *str)
+{
+	if (*str == '\0') return;
+	printstring (str + 1);
+	putchar (*str);
+}
+int main (void)
+{
+	printstring ("91-01-5102 ,raproK aroD - \"lufesu si tra fo eceip taht dna");
+	return (1);
+}
