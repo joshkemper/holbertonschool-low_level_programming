@@ -10,6 +10,7 @@ int main(void)
 	int u;
 
 	for (i = 48; i <= 57; i++)
+	{
 		for (u = 48; u <= 57; u++)
 		{
 			putchar(i);
@@ -21,5 +22,6 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
+	}
 	return (0);
 }
