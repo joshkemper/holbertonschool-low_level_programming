@@ -1,14 +1,19 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	char c;
+	char i;
 
-	for (c = 'a'; c <= 'z'; ++c)
-	printf ("%c", c);
+	for (i = 'a'; i <= 'z'; i++)
+	{
+	putchar (i);
+	putchar ('\n');
+	}
 	return (0);
 }
