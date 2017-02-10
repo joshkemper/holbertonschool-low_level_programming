@@ -1,4 +1,4 @@
-#include <stdio.h>
+  #include <stdio.h>
 /**
  * main - Entry point
  *
@@ -15,13 +15,13 @@ int main(void)
 		{
 			putchar(i);
 			putchar(u);
-			if (u == 57 && i == 57)
+			if (i != 57 || u != 57)
 			{
-				putchar('\n');
+				putchar(',');
+				putchar(' ');
 			}
-			putchar(',');
-			putchar(' ');
 		}
 	}
+	putchar('\n');
 	return (0);
 }
