@@ -9,12 +9,12 @@ int main(void)
 	int i;
 	int u;
 
-	for (i = '0'; i <= '9'; i++)
-		for (u = '0'; u <= '9'; u++)
+	for (i = 48; i <= 57; i++)
+		for (u = 48; u <= 57; u++)
 		{
 			putchar(i);
 			putchar(u);
-			if (u == '9' && i == '9')
+			if (u == 57 && i == 57)
 			{
 				putchar('\n');
 			}
