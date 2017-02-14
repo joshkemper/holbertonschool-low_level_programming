@@ -1,6 +1,15 @@
+#include "holberton.h"
+/**
+ * _isalpha - alphabetic charachter
+ * @c: variable holds char to check
+ *0
+ * Description: checks to see if char is alphabetic charachter
+ *
+ * Return: Always 0
+ */
 int _isalpha(int c)
 {
-	if (c >= 'a' && c<= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
@@ -10,5 +19,4 @@ int _isalpha(int c)
 	}
 	else
 		return (0);
-
 }
