@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
 * jack_bauer - prints every minute of the day of Jack Bauer, 00:00 to 23:59
-*
-*
+* @void - void function
+* a blank line
 * Description -prints every minute of the day of Jack Bauer,00:00 to 23:59
-*
+* section header: Section description
 * Return: void function
 */
 void jack_bauer(void)
