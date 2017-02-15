@@ -4,9 +4,12 @@
  * @a: first integer
  * @b: second integer
  *
- * Return: var c
+ * Return: a + b
  */
 int add(int a, int b)
 {
-	return (a + b);
+	int k;
+
+	k = a + b;
+	return (k);
 }
