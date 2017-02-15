@@ -1,10 +1,9 @@
 #include "holberton.h"
 /**
- * times_table - times tanble to 9
- *
- * Description - times tabble to 9
- *
- *
+ * times_table - times table to 9
+ * @void - void function
+ * Description - times table to 9
+ * section header: Section description
  * return: void
  */
 void times_table(void)
