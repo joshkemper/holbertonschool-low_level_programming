@@ -6,12 +6,13 @@
  * a blank line
  * Description: adds two integer and returns the result
  * section header: Section description
- * Return: 0 for success
+ * Return: var c
  */
 int add(int a, int b)
 {
 	int c;
 
 	c = a + b;
-	return (c);
+	_putchar('\n');
+	return(c);
 }
