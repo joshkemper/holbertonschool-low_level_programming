@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * Main - entry point
+ * _isupper - check uppercase letters
  * @c: varibale to test if uppcase
  * Description - checks to see if a letter is uppcase (1) or not (0)
  *
