@@ -1,10 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - Short description
+ * fizzbuzz - Short description
+ *
  * Description: print all number to one hundred
  *
- * Return: 0 for success
+ * Return: 0
  */
 void fizzbuzz(void)
 {
@@ -31,6 +32,12 @@ void fizzbuzz(void)
 	}
 	printf("\n");
 }
+/**
+ * main - short description
+ * Description: print all numbers to hundred
+ *
+ * Return: success
+ */
 int main(void)
 {
 	fizzbuzz();
