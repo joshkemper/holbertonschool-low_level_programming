@@ -15,7 +15,7 @@ int main(void)
 	first = 1;
 	second = 2;
 	printf("1, 2");
-	while (sum < 7778742048)
+	while (sum < 20365011073)
 	{
 		sum = first + second;
 		printf(", %lu", sum);
