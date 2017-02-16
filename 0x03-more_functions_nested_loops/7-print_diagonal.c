@@ -4,7 +4,7 @@
  * @n: integer set size of triangle
  * Description: prints diagonal line of slashes
  *
- * Return: 0
+ * Return: Void
  */
 void print_diagonal(int n)
 {
