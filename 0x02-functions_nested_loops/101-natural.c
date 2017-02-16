@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
  * main - entry point
@@ -19,7 +18,7 @@ int main(void)
 	{
 		div3 = count % 3;
 		div5 = count % 5;
-		if(div3 == 0 || div5 == 0)
+		if (div3 == 0 || div5 == 0)
 		{
 			sum += count;
 		}
