@@ -1,0 +1,27 @@
+#include <stdio.h>
+/**
+ * main - entry point
+ *
+ * Description: prints the first 50 Fibonacci numbers, starting with 1 and 2
+ *
+ * Return: 0 success
+ **/
+int main(void)
+{
+	long first;
+	long second;
+	long sum;
+
+	first = 1;
+	second = 2;
+	printf("1, 2");
+	while (sum < 7778742048)
+	{
+		sum = first + second;
+		printf(", %lu", sum);
+		first = second;
+		second = sum;
+	}
+	printf("\n");
+	return (0);
+}
