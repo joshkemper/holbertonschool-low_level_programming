@@ -30,7 +30,7 @@ void fizzbuzz(void)
 			else
 			printf("Buzz ");
 		}
-	        else
+		else
 		{
 			printf("%d ", i);
 		}
