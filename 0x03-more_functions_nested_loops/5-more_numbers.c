@@ -1,11 +1,12 @@
 #include "holberton.h"
 /**
- * more_numbers -  prints 10 times the numbers, from 0 to 14
+ * more_numbers - prints 1 through 14 and newline
  *
- * Description: prints 10 times the numbers from 0 to 14
- *
- * Return: void
- */
+(* a blank line
+*
+(*
+* Return: Void
+*/
 void more_numbers(void)
 {
 	int i;
