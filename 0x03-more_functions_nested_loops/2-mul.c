@@ -1,15 +1,15 @@
 #include "holberton.h"
 /**
- * Main - entry point
+ * mul - multiplies two integers
  * @a: first integer to multiply
  * @b: second integer to multiply
  * Description: multiplies two integers, a and b return result
  *
- * Return - c product of a and b
+ * Return - c
  */
 int mul(int a, int b)
 {
-	long c;
+	int c;
 
 	c = a * b;
 	return (c);
