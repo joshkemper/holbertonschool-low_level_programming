@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * Main - entry point
+ * _isdigit - entry point
  * @c: varibale to check if between 0-9
  * Description - checks for uppercase character
  *
@@ -8,7 +8,7 @@
  */
 int _isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}
