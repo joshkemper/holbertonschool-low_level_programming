@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_diagonal - print diagonal
+ * print_diagonal - print diagonal / size of n
  * @n: integer set size of triangle
  * Description: prints diagonal line of slashes
  *
@@ -27,5 +27,4 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
