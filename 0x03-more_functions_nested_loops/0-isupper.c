@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * _isupper - check uppercase letters
  * @c: varibale to test if uppcase
@@ -9,7 +8,7 @@
  */
 int _isupper(int c)
 {
-	if (c <= 'A' && c <= 'Z')
+	if (c >= 65 && c <= 90)
 	{
 		return (1);
 	}
