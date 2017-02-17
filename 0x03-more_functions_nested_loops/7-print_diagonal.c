@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
- * print_diagonal - print diagonal / size of n
+ * print_diagonal - print diagonal /s size of n
  * @n: integer set size of triangle
  * Description: prints diagonal line of slashes
- *
  * Return: Void
  */
 void print_diagonal(int n)
@@ -17,9 +16,9 @@ void print_diagonal(int n)
 	}
 	else if (n > 0)
 	{
-		for (i = 1; i <= n; i++)
+		for (i = 0; i <= n; i++)
 		{
-			for (j = 1; j <= i; j++)
+			for (j = 0; j <= i -1; j++)
 			{
 				if (j == 0 && i == 0)
 				{
