@@ -8,9 +8,8 @@
  */
 int main(void)
 {
-	long  number = 612852475143;
-	long div = 2;
-	long maxFact;
+	long number = 612852475143;
+	long div = 2, maxFact;
 
 	while (number != 0)
 	{
@@ -20,11 +19,13 @@ int main(void)
 		{
 			maxFact  = number;
 			number = number / div;
+
 			if (number == 1)
 			{
-				printf("%ld", maxFact);
+				printf("%ld\n", maxFact);
 				break;
 			}
 		}
 	}
+	return (0);
 }
