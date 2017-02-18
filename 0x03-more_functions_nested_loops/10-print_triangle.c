@@ -25,10 +25,9 @@ void print_triangle(int size)
 				_putchar(' ');
 			}
 			for (hashes = spaces; hashes <= size; hashes++)
-                        {
-                                _putchar('#');
-                        }
-
+			{
+				_putchar('#');
+			}
 			_putchar('\n');
 		}
 	}
