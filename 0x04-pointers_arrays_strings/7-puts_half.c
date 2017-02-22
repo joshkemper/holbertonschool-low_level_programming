@@ -19,13 +19,13 @@ void puts_half(char *str)
 	}
 	if (length % 2 != 0)
 	{
-		_putchar((length -1) /2);
+		_putchar((length - 1) / 2);
 	}
 	else
 	{
-	length = (length / 2);
+		length = (length / 2);
 	}
-        for (count = 0; count <= i; count++)
+	for (count = 0; count <= i; count++)
 	{
 		_putchar(str[length]);
 		length++;
