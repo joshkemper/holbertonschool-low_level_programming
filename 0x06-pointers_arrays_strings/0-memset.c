@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _memset - fills n bytes of memory area s with constant byte b
  * @s: buffer to write on
@@ -16,6 +15,6 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		s[i] = b;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (s);
 }
