@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
  * _strstr - finds first occurrence ofn substring needlestring haystack
  * @haystack: first string to check for pattern
@@ -8,25 +9,23 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *p2;
+  int i;
+  int j;
+  int k;
 
-	if (!*needle) return haystack;
-	char *p1 = (char*)haystack;
-	while (*p1)
+  for (i = 0; haystack[i] != '\0'; i++)
+    {
+      for (k = i, j = 0; needle[j] != '\0'; k++ , j++)
 	{
-		char *p1Begin = p1;
-		p2 = (char *)needle;
-
-		while (*p1 && *p2 && *p1 == *p2)
-		{
-			p1++;
-			p2++;
-		}
-		if (!*p2)
-		{
-			return p1Begin;
-			p1 = p1Begin + 1;
-		}
+	  if (haystack[k] != needle[j] || haystack[k] == '\0')
+	    {
+	      break;
+	    }
 	}
-	return ('\0');
+      if (needle[j] == '\0')
+	    {
+	      return (haystack + i);
+	    }
+	}
+      return ('\0');
 }
