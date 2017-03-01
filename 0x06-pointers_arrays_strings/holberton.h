@@ -33,3 +33,4 @@ char *_strncat(char *dest, char *src, int n);
 char *_strcat(char *dest, char *src);
 char *rot13(char *);
 char *_memset(char *s, char b, unsigned int n);
+void set_string(char **s, char *to);
