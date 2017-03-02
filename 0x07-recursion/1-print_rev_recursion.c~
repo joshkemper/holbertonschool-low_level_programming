@@ -1,0 +1,29 @@
+#include "holberton.h"
+#include <stdio.h>
+/**
+ *
+ *
+ *
+ *
+ *
+ */
+void _print_rev_recursion(char *s)
+{
+	int count;
+
+	count = 0;
+	while (*s != 0)
+	{
+		count++;
+		s++;
+	}
+	if (*s == 0)
+	{
+		putchar ('\n');
+	}
+	else
+	{
+		putchar (*s + count);
+		_print_rev_recursion(s - 1);
+	}
+}
