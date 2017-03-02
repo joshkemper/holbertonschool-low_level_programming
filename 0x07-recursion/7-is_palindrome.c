@@ -27,11 +27,11 @@ int _strlen_recursion(char *s)
 
 int first_is_last(char *first, char *last)
 {
-	if (first != last)
+	if (*first != *last)
 	{
 		return (0);
 	}
-	else if (&first == &last)
+	else if (first >= last)
 	{
 		return (1);
 	}
@@ -52,8 +52,8 @@ int is_palindrome(char *s)
 	char *first;
 	char *last;
 
-	*first  = *s;
-	*last = *(s + len - 1);
+	first  = s;
+	last = (s + len - 1);
 
 	return (first_is_last(first, last));
 }
