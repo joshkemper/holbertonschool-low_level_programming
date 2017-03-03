@@ -1,2 +1,2 @@
 #!bin/bash
-ar -rc libholberton.a *.o
+ar -rc liball.a *.o
