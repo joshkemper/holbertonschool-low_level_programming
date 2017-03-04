@@ -6,7 +6,7 @@
  *
  * Return: 0 for success
  */
-int main (int argc, char* argv)
+int main (int argc,__attribute__((unused))char* argv)
 {
 	printf("%d", argc - 1);
 	putchar('\n');
