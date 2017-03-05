@@ -4,9 +4,10 @@
 #include <ctype.h>
 #include <string.h>
 /**
- *
- *
- *
+ * main - entry
+ * @argc: number of main args
+ * @argv: list of main args
+ * Return: sum
  */
 int main (int argc, char* argv[])
 {
