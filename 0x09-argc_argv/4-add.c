@@ -1,6 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 /**
  *
  *
@@ -10,21 +12,38 @@ int main (int argc, char* argv[])
 {
 	int sum = 0;
 	int i;
+	unsigned int j = 0;
+	int p;
+	char *k;
 
-	if(argc > 1)
+	if(argc == 1)
+	{
+		printf("0\n");
+		return (0);
+	}
+	else
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) >= 0 && atoi(argv[i]) < 2147483647)
-                        {
-				sum += atoi(argv[i]);
-                        }
-			else if (atoi(argv[i]) >= 'a' && atoi(argv[i] <= 'z'))
+			k = argv[i];
+			p = 0;
+
+			for (j = 0; j <= strlen(argv[i]) - 1; j++)
 			{
-				printf("Error");
+				if (k[j] < '0' || k[j] > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
+				else
+					p = 1;
+			}
+			if (p == 1)
+			{
+				sum += atoi(argv[i]);
 			}
 		}
-		printf("%d", sum);
 	}
-	return (0);
+	printf("%d\n", sum);
+	return (sum);
 }
