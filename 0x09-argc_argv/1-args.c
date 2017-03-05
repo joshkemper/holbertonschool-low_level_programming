@@ -1,14 +1,12 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
  * Main - entry point
- *
- *
+ * @argc: count of arguments to main
+ * @argv: list of arguments to main
  * Return: 0 for success
  */
-int main (int argc,__attribute__((unused))char* argv)
+int main (int argc, char __attribute__((unused)) *argv)
 {
-	printf("%d", argc - 1);
-	putchar('\n');
+	printf("%d\n", argc - 1);
 	return (0);
 }
