@@ -1,20 +1,20 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * Main - entry point
+ * main - entry point
+ * @argc: count of args for c
+ * @argv: list of arguments
  *
  * Return: 0 for success
  */
-int main (int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int product = 1;
 	int i;
 
-	if (argc < 2)
+	if (argc < 1)
 	{
-		printf("Error");
-		return (1);
+		return (0);
 	}
 	else
 	{
