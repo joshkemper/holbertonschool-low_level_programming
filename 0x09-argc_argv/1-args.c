@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * Main - entry point
+ * main - entry point
  * @argc: count of arguments to main
  * @argv: list of arguments to main
  * Return: 0 for success
