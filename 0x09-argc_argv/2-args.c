@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
  * main - entry point
@@ -7,7 +6,7 @@
  *
  * Return: 0 success
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int i;
 
