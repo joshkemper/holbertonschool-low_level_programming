@@ -11,40 +11,32 @@
  */
 int main (int argc, char* argv[])
 {
-	int sum = 0;
 	int i;
-	unsigned int j = 0;
-	int p;
-	char *k;
+	int j;
+	int len;
+	int sum = 0;
 
-	if(argc == 1)
+	if (argc == 1)
 	{
 		printf("0\n");
-		return (0);
 	}
 	else
 	{
 		for (i = 1; i < argc; i++)
 		{
-			k = argv[i];
-			p = 0;
-
-			for (j = 0; j <= strlen(argv[i]) - 1; j++)
+			len = strlen(argv[i]);
+			for (j = 0; j < len; j++)
 			{
-				if (k[j] < '0' || k[j] > '9')
+				if (argv[i][j] < '0' || argv[i][j] > '9')
 				{
 					printf("Error\n");
 					return (1);
 				}
-				else
-					p = 1;
 			}
-			if (p == 1)
-			{
-				sum += atoi(argv[i]);
-			}
+			sum += atoi(argv[i]);
 		}
+		printf("%d\n", sum);
+		return (sum);
 	}
-	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
