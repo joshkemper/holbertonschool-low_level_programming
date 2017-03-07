@@ -1,11 +1,17 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * create_array - Creates array of chars initializes it with a specific char
+ * @size: size of array
+ * @c: charachter to print in array
+ * Description: creates array of chars initializes it with a specific char
+ * Return: str value
+ */
 char *create_array(unsigned int size, char c)
 {
 	char *str;
-	int i;
+	unsigned int i;
 
 	str = malloc(size * sizeof(char));
 	if (str == NULL)
