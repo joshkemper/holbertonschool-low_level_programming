@@ -9,7 +9,7 @@
  * @argv: list of main args
  * Return: sum
  */
-int main (int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 	int j;
