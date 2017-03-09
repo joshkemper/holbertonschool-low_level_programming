@@ -1,7 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
-#include <limits.h>
 /**
  * _strlen - counts the length of a given string
  * @s: pointer to a string , characters in string are counted
@@ -50,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = stringlenS2;
 	}
-	ptr = malloc(sizeof(char) * (stringlenS1 + n));
+	ptr = malloc(sizeof(char) * (stringlenS1 + n + 1));
 	if (ptr == NULL)
 	{
 		return (NULL);
