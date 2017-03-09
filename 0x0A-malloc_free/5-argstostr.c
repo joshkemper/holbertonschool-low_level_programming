@@ -2,7 +2,9 @@
 #include <stdlib.h>
 /**
  * total_length - total length of all strings
- *
+ * @ac: argc
+ * @av: argv
+ * Retrurn: n
  */
 unsigned int total_length(int ac, char **av)
 {
@@ -13,7 +15,8 @@ unsigned int total_length(int ac, char **av)
 }
 /**
  * sum_length - sum of all strings
- *
+ * @av: double pointer to argv
+ * Return: n
  */
 unsigned int sum_length(int **av)
 {
@@ -48,9 +51,10 @@ int _strlen(char *s)
 }
 /**
  * copy_strings - copy strings to av
- *
+ * @av: argv
+ * @s: char
  */
-char copy_strings(**av,char *s)
+char copy_strings(char **av,char  *s)
 {
 	int i = 0;
 
@@ -60,12 +64,18 @@ char copy_strings(**av,char *s)
 		i++;
 	}
 }
+/**
+ * argstostr - function that concatenates all the arguments of your program
+ * @ac: argc
+ * @av: argv
+ * Return: argv
+ */
 char *argstostr(int ac, char *av)
 {
 	unsigned int bytes;
 	char *s;
 
-	bytes = total_length(ac,av);
+	bytes = total_length(ac, av);
 	{
 		s = malloc(bytes);
 		if ( s == NULL)
