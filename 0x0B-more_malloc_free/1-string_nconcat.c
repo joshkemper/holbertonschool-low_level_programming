@@ -45,7 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	stringlenS1 = _strlen(s1);
 	stringlenS2 = _strlen(s2);
-	if (stringlenS2 <= n)
+	if (stringlenS2 < n)
 	{
 		n = stringlenS2;
 	}
