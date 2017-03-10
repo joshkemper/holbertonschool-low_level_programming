@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	else if (n >= stringlenS2)
+	if (n >= stringlenS2)
 	{
 		n = stringlenS2;
 	}
@@ -59,7 +59,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (k = 0; k < n; k++)
 	{
-		ptr[i + k] = s2[k];
+		ptr[i] = s2[k];
+		i++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }
