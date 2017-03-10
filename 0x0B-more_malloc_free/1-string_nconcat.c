@@ -12,7 +12,7 @@ int _strlen(char *s)
 	int count;
 
 	count = 0;
-	while (*s != 0)
+	while (*s != '\0')
 	{
 		count++;
 		s++;
@@ -34,8 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int stringlenS1;
 	unsigned int stringlenS2;
 
-	stringlenS1 = _strlen(s1);
-	stringlenS2 = _strlen(s2);
+
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -44,7 +43,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	if (stringlens2 <= n)
+	stringlenS1 = _strlen(s1);
+	stringlenS2 = _strlen(s2);
+	if (stringlenS2 <= n)
 	{
 		n = stringlenS2;
 	}
@@ -57,10 +58,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr[i] = s1[i];
 	}
-	for (k = 0; k < n; k++)
+	for (k = 0; k < n; k++, i++)
 	{
 		ptr[i] = s2[k];
-		i++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
