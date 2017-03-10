@@ -44,11 +44,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	if (n >= stringlenS2)
+	if (stringlens2 <= n)
 	{
 		n = stringlenS2;
 	}
-	ptr = malloc((n + stringlenS1 * sizeof(char)) + 1);
+	ptr = malloc((n + 1 + stringlenS1) * sizeof(char));
 	if (ptr == NULL)
 	{
 		return (NULL);
