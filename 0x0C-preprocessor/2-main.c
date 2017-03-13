@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-	printf("%s", __FILE__ );
+	printf("%s", __FILE__);
 	putchar('\n');
 	return (0);
 }
