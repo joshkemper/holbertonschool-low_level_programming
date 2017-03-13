@@ -1,2 +1,2 @@
 Read me file
-with info about all othe files
+with info about all other files
