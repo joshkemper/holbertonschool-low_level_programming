@@ -13,12 +13,12 @@
 
 char *_strcpy(char *dest, char *src)
 {
-        int i;
+	int i;
 
-        for (i = 0; src[i] != '\0'; i++)
-        {
-                dest[i] = src[i];
-        }
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
 	dest[i] = '\0';
 	return (dest);
 }
@@ -32,46 +32,55 @@ char *_strcpy(char *dest, char *src)
 
 int _strlen_recursion(char *s)
 {
-        int i = 0;
+	int i = 0;
 
-        if (*s == '\0')
-        {
-                return (0);
-        }
-        else
-        {
-                i = (_strlen_recursion(s + 1));
-                return (i + 1);
-        }
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		i = (_strlen_recursion(s + 1));
+		return (i + 1);
+	}
 }
-
+/**
+ * new_dog - function that creates a new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: name of owner
+ *
+ * Description: a function that creates a new dog
+ * Return: new_dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-        dog_t *new_dog;
-        if (name == NULL || owner == NULL)
-        {
-                return NULL;
-        }
-        new_dog = malloc(sizeof(dog_t));
-        if (new_dog == NULL)
-        {
-                return NULL;
-        }
-        new_dog->name = malloc(sizeof(char) * _strlen_recursion(name) + 1);
-        if (new_dog->name == NULL)
-        {
-                free (new_dog);
-                return NULL;
+	dog_t *new_dog;
+
+	if (name == NULL || owner == NULL)
+	{
+		return (NULL);
 	}
-        new_dog->owner = malloc(sizeof(char) * _strlen_recursion(owner) + 1);
-        if (new_dog->owner == NULL)
-        {
-                free (new_dog->name);
-                free (new_dog);
-                return NULL;
-        }
-        _strcpy(new_dog->name, name);
-        _strcpy(new_dog->owner, owner);
-        new_dog->age = age;
-        return (new_dog);
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
+	{
+		return (NULL);
+	}
+	new_dog->name = malloc(sizeof(char) * _strlen_recursion(name) + 1);
+	if (new_dog->name == NULL)
+	{
+		free(new_dog);
+		return (NULL);
+	}
+	new_dog->owner = malloc(sizeof(char) * _strlen_recursion(owner) + 1);
+	if (new_dog->owner == NULL)
+	{
+		free(new_dog->name);
+		free(new_dog);
+		return (NULL);
+	}
+	_strcpy(new_dog->name, name);
+	_strcpy(new_dog->owner, owner);
+	new_dog->age = age;
+	return (new_dog);
 }
