@@ -3,8 +3,9 @@
 #include <stdlib.h>
 
 /**
- * print_strings - function that prints all strings giv as arguments
- * @x: loop integer
+ * print_strings - function that prints all strings give as arguments
+ * @separator: string that separates the arguments
+ * @n: number of arguments passed
  * Return: none
  */
 
@@ -19,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		if (va_arg(argumentList, char *) == NULL)
 		{
-			printf("nil ");
+			printf("(nil)");
 		}
 		if (x != n - 1 && separator != NULL)
 		{
@@ -30,19 +31,3 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_end(argumentList);
 	printf("\n");
 }
-
-
-
-
-
-
-
-/**if (separator == NULL)
-   {
-   printf("%s\n", va_arg(argumentList, char *));
-   }
-   if (va_arg(argumentList, char *) == NULL)
-   {
-   printf("nil");
-   }
-*/
