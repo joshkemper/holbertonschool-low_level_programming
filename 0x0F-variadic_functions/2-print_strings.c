@@ -5,7 +5,7 @@
 /**
  * print_strings - function that prints all strings give as arguments
  * @separator: string that separates the arguments
- * @n: number of arguments passed
+ * @n: number of arguments passed in function
  * Return: none
  */
 
