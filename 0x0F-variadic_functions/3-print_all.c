@@ -42,6 +42,10 @@ void print_string(va_list ap)
 	char *ptr_string;
 
 	ptr_string = (va_arg(ap, char*));
+	if (ptr_string == NULL)
+	{
+		ptr_string = "(nil)";
+	}
 	printf("%s", ptr_string);
 }
 /**
