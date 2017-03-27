@@ -12,3 +12,13 @@ Prototype: listint_t *add_nodeint(listint_t **head, const int n);
 
 3-add_nodeint_end.c - function that adds a new node at the end of a linked list
 Prototype: 3-add_nodeint_end.c
+
+4-free_listint.c - function that free's a linked list
+Prototype: void free_listint(listint_t *head);
+
+5-free_listint2.c - function that free's a linked list
+Prototype: void free_listint2(listint_t **head);
+
+6-pop_listint.c - deletes head node of linked list, returns the head node's data\
+(n)
+Prototype: int pop_listint(listint_t **head);
