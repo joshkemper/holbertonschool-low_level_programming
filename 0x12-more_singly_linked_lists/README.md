@@ -9,3 +9,6 @@ Prototype: size_t listint_len(const listint_t *h);
 
 2-add_nodeint.c - Adds a new node at the beginning of a linked list
 Prototype: listint_t *add_nodeint(listint_t **head, const int n);
+
+3-add_nodeint_end.c - function that adds a new node at the end of a linked list
+Prototype: 3-add_nodeint_end.c
