@@ -16,7 +16,7 @@ int pop_listint(listint_t **head)
 	listint_t *temp_node;
 	int saved_data;
 
-	if (head != NULL)
+	if (*head != NULL)
 	{
 		temp_node = *head;
 		*head = temp_node->next;
