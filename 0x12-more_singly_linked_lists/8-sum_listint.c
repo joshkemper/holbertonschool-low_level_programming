@@ -6,7 +6,7 @@
 /**
  * sum_listint - returns the sum of all the data (n) of a linked list
  * @head: pointer to head of a linked list
- * Result: return the sum of all (n) value of nodes
+ * Return: return the sum of all (n) value of nodes
  */
 
 int sum_listint(listint_t *head)
