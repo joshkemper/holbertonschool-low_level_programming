@@ -8,6 +8,6 @@
 <font size="4"><p align="left">0x00-Hello, World</p></font>
 <font size="2"><p align="left">Basics of shell scripts, gcc, holberton C coding style requirments</p></font>
 <font size="4"><p align="left">0x01-variables_if_else_while</p></font>
-<font size="2"><p align="left">Arithmetic operators, Logical operators, Relational operators\
+<font size="2"><p align="left">Arithmetic operators, Logical operators, Relational operators
 , boolean operators, if & else statements, While loops, ASCII characters</p></font>
-<p><font size="10">This is some text!</font></p>
+<p font-size="10">This is some text!</p>
