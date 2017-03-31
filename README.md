@@ -3,7 +3,7 @@
 "/>
 <br>
 <br>
-<font size="8" style="float: left"><b>Holberton Low-Level Programming</b></font>
+<font size="8"><b><p align="right">Holberton Low-Level Programming<p></b></font>
 <br>
 <font size="6">Projects</font>
 <br>
