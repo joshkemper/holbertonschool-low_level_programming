@@ -5,8 +5,8 @@
 <h1><p align="center">Holberton Low-Level Programming</h1></p></font>
 <br>
 <h2><p>Projects:</p></h2>
-<h3><p align="left"><b>0x00-Hello, World</b></p></font>
-<h3><p align="left">Basics of shell scripts, gcc, holberton C coding style requirments</p></h3>
-<h3><p align="left"><b>0x01-variables_if_else_while</b></p><</h3>
-<h3><p align="left">Arithmetic operators, Logical operators, Relational operators
-, boolean operators, if & else statements, While loops, ASCII characters</p></h3>
+<h4><p align="left"><b>0x00-Hello, World</b></p></4>
+<h4><p align="left">Basics of shell scripts, gcc, holberton C coding style requirments</p></h4>
+<h4><p align="left"><b>0x01-variables_if_else_while</b></p></h4>
+<h4><p align="left">Arithmetic operators, Logical operators, Relational operators
+, boolean operators, if & else statements, While loops, ASCII characters</p></h4>
