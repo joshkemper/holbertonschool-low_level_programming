@@ -1,6 +1,8 @@
 <p align="center">
   <img src="https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" width="350\
 "/>
+<br>
+<br>
 <font size="8">Holberton Low-Level Programming</font>
 <br>
 <font size="6">Projects</font>
