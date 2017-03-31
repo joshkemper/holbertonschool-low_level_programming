@@ -1,20 +1,6 @@
 #include <stdio.h>
 #include "holberton.h"
 
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 /**
  * print_binary - prints the binary representation of a number
  * @n: integer to convert
@@ -24,20 +10,28 @@ int _putchar(char c)
 void print_binary(unsigned long int n)
 {
 	unsigned int i;
-	unsigned int shift;
+	unsigned long int shift;
+	unsigned int size = sizeof(n) * 8;
+	unsigned int flag = 1;
 
-	for (i = 0; i < 64; i++)
+	for (i = 0; i < size; i++)
 	{
 		shift = (n << 1);
 		shift = (shift >> 1);
 		if (n != shift)
 		{
+			flag = 0;
 			_putchar('1');
 		}
-		else
+		else if (!flag)
 		{
 			_putchar('0');
 		}
 		n = n << 1;
 	}
+	if (flag == 1)
+	{
+		_putchar('0');
+	}
+
 }
