@@ -2,7 +2,7 @@
   <img src="https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" width="350\
 "/>
 <br>
-<h1<p align="center">Holberton Low-Level Programming</h1></p></font>
+<h1><p align="center">Holberton Low-Level Programming</h1></p></font>
 <br>
 <p><font size="7"><em>Projects:</em></font></p>
 <font size="4"><p align="left">0x00-Hello, World</p></font>
