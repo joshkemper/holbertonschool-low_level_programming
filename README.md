@@ -4,10 +4,9 @@
 <br>
 <h1><p align="center">Holberton Low-Level Programming</h1></p></font>
 <br>
-<p><font size="7"><em>Projects:</em></font></p>
-<font size="4"><p align="left">0x00-Hello, World</p></font>
-<font size="2"><p align="left">Basics of shell scripts, gcc, holberton C coding style requirments</p></font>
-<font size="4"><p align="left">0x01-variables_if_else_while</p></font>
-<font size="2"><p align="left">Arithmetic operators, Logical operators, Relational operators
-, boolean operators, if & else statements, While loops, ASCII characters</p></font>
-<p font-size="10">This is some text!</p>
+<h2><p>Projects:</p></h2>
+<h3><p align="left"><b>0x00-Hello, World</b></p></font>
+<h3><p align="left">Basics of shell scripts, gcc, holberton C coding style requirments</p></h3>
+<h3><p align="left"><b>0x01-variables_if_else_while</b></p><</h3>
+<h3><p align="left">Arithmetic operators, Logical operators, Relational operators
+, boolean operators, if & else statements, While loops, ASCII characters</p></h3>
