@@ -3,9 +3,9 @@
 "/>
 <br>
 <br>
-<font size="8"><b><p align="right">Holberton Low-Level Programming<p></b></font>
+<font size="8"><b><p align="left">Holberton Low-Level Programming<p></b></font>
 <br>
-<font size="6">Projects</font>
+<font size="6"><p align="left">Projects<p></font>
 <br>
-<font size="4">Hello, World</font>
-<font size="2">Basics of shell scripts, gcc, holberton C coding style requirments</font>
+<font size="4"><p align="left">Hello, World<p></font>
+<font size="2"><p align="left">Basics of shell scripts, gcc, holberton C coding style requirments</p></font>
