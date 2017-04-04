@@ -9,11 +9,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
 	int fd;
-	int fdread, fdwrite, fdclose;
+	int fdread, fdwrite, fdclose;	buf = malloc(sizeof(char) * letters);
 
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
+	{
 		return (-1);
+		free(buf);
+	}
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
