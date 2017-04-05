@@ -40,6 +40,14 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	if (text_content == NULL && filename != NULL)
+	{
+		return (1);
+	}
+	else if (text_content == NULL && filename == NULL)
+	{
+		return (-1);
+	}
 	fd = open(filename, O_APPEND | O_WRONLY, 0600);
 	if (fd == -1)
 	{
