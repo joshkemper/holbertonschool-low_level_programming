@@ -19,8 +19,9 @@ int main(int ac, char **av)
 
 	while (p != NULL)
 	{
-		array[i++] = p;
+		array[i] = p;
 		p = strtok(NULL, " ");
+		i++;
 	}
 
 	for (i = 0; i < 4; ++i)
