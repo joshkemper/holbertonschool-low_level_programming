@@ -12,7 +12,6 @@
 
 int main(int ac, char **av)
 {
-
 	char buf[] = "abcd efg hijk lmno";
 	int i = 0;
 	char *p = strtok(buf, " ");
@@ -30,25 +29,3 @@ int main(int ac, char **av)
 	}
 	return (0);
 }
-
-/*	const char delimiter[2] = " ";
-	char *token;
-	int i;
-	size_t bufsize = 32;
-	char *buf =  malloc(sizeof(char) * bufsize);
-	int c;
-
-        if ( buf == NULL)
-        {
-                exit(1);
-        }
-	printf("$ ");
-	c =  getline(&buf, &bufsize, stdin);
-	token = strtok(buf, delimiter);
-	while ( token != NULL)
-	{
-	       write(1, &buf, c);
-	       printf("%s ", token);
-	       token = strtok(NULL, delimiter);
-	}
-	return (0);*/
