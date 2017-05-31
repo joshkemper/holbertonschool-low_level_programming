@@ -21,6 +21,8 @@ hash_table_t * hash_table_create(unsigned long int size)
 	hashtable->array = malloc(sizeof(char *) * size);
 	if (hashtable->array == NULL)
 	{
+		free(hashtable->array);
+		free(hashtable);
 		return NULL;
 	}
 	for (i = 0; i < size; i++)
