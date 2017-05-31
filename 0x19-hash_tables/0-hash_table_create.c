@@ -11,7 +11,7 @@
 
 hash_table_t * hash_table_create(unsigned long int size)
 {
-	hash_table_t *hashtable = NULL;
+	hash_table_t *hashtable;
 
 	if (size == 0)
 	{
@@ -26,7 +26,6 @@ hash_table_t * hash_table_create(unsigned long int size)
 	hashtable->array = calloc(size, sizeof(hash_node_t *));
 	if (hashtable->array == NULL)
 	{
-		free(hashtable);
 		return NULL;
 	}
         return hashtable;
