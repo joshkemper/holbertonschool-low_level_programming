@@ -3,17 +3,13 @@
 #include <stdio.h>
 #include "hash_tables.h"
 
-/**
- * hash_table_create - create a hash table
- * @size: size of table
- * Return: pointer to hash table
- */
+
 hash_table_t * hash_table_create(unsigned long int size)
 {
 	hash_table_t *hashtable = NULL;
 	unsigned int i;
 
-	if (size = 0)
+	if (size == 0)
 	{
 		return NULL;
 	}
