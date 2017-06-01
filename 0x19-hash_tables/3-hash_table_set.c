@@ -10,46 +10,29 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int d;
+	unsigned long int index;
 	hash_node_t *newNode;
 
-	d = hash_djb2((unsigned char *)key) % ht->size;
-	printf("node %p:\n", (void *)ht->array[d]);
+	index = hash_djb2((unsigned char *)key) % ht->size;
 	newNode = malloc(sizeof(hash_node_t));
 	if (newNode == NULL)
 	{
 		return (0);
 	}
-	if (ht->array[d] != NULL)
+	if (ht->array[index] != NULL)
 	{
-		while (ht->array[d]->key != NULL)
+		if (strcmp(ht->array[index]->key, key) == 0)
 		{
-			if (strcmp(ht->array[d]->key, key) != 0)
-			{
-				printf("array key %s: reg key %s\n", ht->array[d]->key, key);
-				ht->array[d] = ht->array[d]->next;
-				d++;
-			}
-			else
-			{
-				printf("2nd array key %s: 2nd reg key %s\n", ht->array[d]->key, key);
-				newNode->key = strdup(key);
-				newNode->value = strdup(value);
-				newNode->next = NULL;
-				ht->array[d] = newNode;
-				printf("2nd node %p:\n", (void *)ht->array[d]);
-				break;
-			}
+			ht->array[index]->value = strdup(value);
 		}
+		ht->array[index] = ht->array[index]->next;
 	}
 	else
 	{
 		newNode->key = strdup(key);
-		printf("key %s:\n", newNode->key);
 		newNode->value = strdup(value);
 		newNode->next = NULL;
-		ht->array[d] = newNode;
-		printf("3rd node %p:\n", (void *)ht->array[d]);
+		ht->array[index] = newNode;
 	}
 	return (1);
 }
