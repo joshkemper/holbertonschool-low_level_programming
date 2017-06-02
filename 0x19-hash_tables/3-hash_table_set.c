@@ -25,14 +25,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			ht->array[index]->value = strdup(value);
 		}
+		if (ht->array[index] == NULL)
+		{
+			newNode->key = strdup(key);
+			newNode->value = strdup(value);
+			newNode->next = NULL;
+			ht->array[index] = newNode;
+		}
 		ht->array[index] = ht->array[index]->next;
 	}
-	else
-	{
-		newNode->key = strdup(key);
-		newNode->value = strdup(value);
-		newNode->next = NULL;
-		ht->array[index] = newNode;
-	}
+	newNode->key = strdup(key);
+	newNode->value = strdup(value);
+	newNode->next = NULL;
+	ht->array[index] = newNode;
 	return (1);
 }
