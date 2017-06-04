@@ -40,7 +40,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
                 newNode->next = ht->array[index];
                 ht->array[index] = newNode;
 	}
-/*
 	else
 	{
 		newNode->key = strdup(key);
@@ -48,6 +47,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		newNode->next = ht->array[index];
 		ht->array[index] = newNode;
 	}
-*/
 	return (1);
 }
