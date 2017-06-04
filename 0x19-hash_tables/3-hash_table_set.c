@@ -35,17 +35,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			}
 			tempNode = tempNode->next;
 		}
-		newNode->key = strdup(key);
-                newNode->value = strdup(value);
-                newNode->next = ht->array[index];
-                ht->array[index] = newNode;
 	}
-	else
-	{
-		newNode->key = strdup(key);
-		newNode->value = strdup(value);
-		newNode->next = ht->array[index];
-		ht->array[index] = newNode;
-	}
+	newNode->key = strdup(key);
+	newNode->value = strdup(value);
+	newNode->next = ht->array[index];
+	ht->array[index] = newNode;
 	return (1);
 }
