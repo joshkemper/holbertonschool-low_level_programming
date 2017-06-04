@@ -11,30 +11,26 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *newNode, *tempNode;
+	hash_node_t *newNode;
 
-	printf("start\n");
+
 	if (key == NULL || value == NULL || ht == NULL)
 	{
 		return (0);
 	}
 	index = hash_djb2((unsigned char *)key) % ht->size;
 	newNode = malloc(sizeof(hash_node_t));
-	printf("got into beginiing\n");
 	if (newNode == NULL)
 	{
 		return (0);
 	}
-	printf("got to if case\n");
-	if (ht->array[index])
+	if (ht->array[index] != NULL)
 	{
-		printf("got up in here\n");
 		if (strcmp(ht->array[index]->key, key) == 0)
 		{
-			printf("got here\n");
 			ht->array[index]->value = strdup(value);
 		}
-			ht->array[index] = ht->array[index]->next;
+		ht->array[index] = ht->array[index]->next;
 	}
 	newNode->key = strdup(key);
 	newNode->value = strdup(value);
