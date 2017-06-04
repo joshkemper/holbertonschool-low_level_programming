@@ -13,7 +13,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned int index;
 	hash_node_t *tempNode = NULL;
 	index = hash_djb2((unsigned char *)key) % ht->size;
-	if (ht->array[index])
+	if (ht->array[index] != NULL)
 	{
 		tempNode = ht->array[index];
 		while (tempNode != NULL)
