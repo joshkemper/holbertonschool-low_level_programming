@@ -6,21 +6,60 @@
  * Return: void
  */
 
-void hash_table_print(const hash_table_t *ht)
+int null_checker(const hash_table_t *ht, unsigned long int size, unsigned int index)
 {
-	unsigned int index;
-	hash_node_t *tempNode = NULL;
+	unsigned int i;
+	unsigned int count = 0;
 
-	index = 0;
-	printf("{");
-	for (index = 0; index < 1025; index++)
+	for (i = index; i < size; i++)
 	{
-		tempNode = ht->array[index];
-		if (tempNode != NULL)
-		{
-			printf("'%s':'%s'", tempNode->key, tempNode->value);
 
+		if (ht->array[i] == NULL)
+		{
+			continue;
+		}
+		else
+		{
+			count = count + 1;
 		}
 	}
-	printf("}\n");
+	return (count);
+}
+
+/**
+ *
+ *
+ *
+ */
+
+void hash_table_print(const hash_table_t *ht)
+{
+
+	unsigned int index;
+	int c;
+	hash_node_t *tempNode = NULL;
+
+	printf("{");
+        for (index = 0; index <= ht->size; index++)
+        {
+		tempNode = ht->array[index];
+		printf("'%s':'%s'", tempNode->key, tempNode->value);
+		c = null_checker(ht, ht->size, index);
+		if (c == 0)
+		{
+			if (tempNode->key != NULL)
+			{
+				printf("'%s':'%s'", tempNode->key, tempNode->value);
+			}
+			else
+			{
+				continue;
+			}
+		}
+		else
+		{
+			printf("'%s':'%s', ", tempNode->key, tempNode->value);
+		}
+	}
+	printf("\n");
 }
