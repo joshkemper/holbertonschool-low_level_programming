@@ -1,9 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_print - prints a hash table
- * @ht: hash table to print
- * Return: void
+ * null_checker - counts the amount of non empty arrays in hash table after index
+ * @ht: hash table
+ * @size: size of hash table
+ * @index: index of array to start chcking from
+ * Return: the number of arrays in hash table that are not NULL
  */
 
 int null_checker(const hash_table_t *ht, unsigned long int size, unsigned int index)
@@ -27,32 +29,36 @@ int null_checker(const hash_table_t *ht, unsigned long int size, unsigned int in
 }
 
 /**
- *
- *
- *
+ * hash_table_print - prints a hash table
+ * @ht: hash table
+ * Return: none
  */
 
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned int index;
-	hash_node_t *tempNode = NULL;
+	hash_node_t *tempNode;
 
 	printf("{");
 	for (index = 0; index <= ((ht->size) - 1); index++)
         {
-		if (ht->array[index] != NULL)
+		tempNode = ht->array[index];
+		while (tempNode != NULL)
 		{
-			tempNode = ht->array[index];
-			if (null_checker(ht, ht->size, index) <= 0)
+			if (null_checker(ht, ht->size, index) <= 1)
 			{
-				printf("%s: %s", tempNode->key, tempNode->value);
+				printf("'%s': ", tempNode->key);
+				printf("'%s'", tempNode->value);
 				tempNode = tempNode->next;
 			}
-			else if (null_checker(ht, ht->size, index) > 0)
+			else
 			{
-				printf("'%s: %s', ", tempNode->key, tempNode->value);
+				printf("'%s': ", tempNode->key);
+                                printf("'%s'", tempNode->value);
+				printf(", ");
+				tempNode = tempNode->next;
 			}
 		}
 	}
-	printf("}");
+	printf("}\n");
 }
