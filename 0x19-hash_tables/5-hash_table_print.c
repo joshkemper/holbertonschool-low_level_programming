@@ -34,32 +34,25 @@ int null_checker(const hash_table_t *ht, unsigned long int size, unsigned int in
 
 void hash_table_print(const hash_table_t *ht)
 {
-
 	unsigned int index;
-	int c;
 	hash_node_t *tempNode = NULL;
 
 	printf("{");
-        for (index = 0; index <= ht->size; index++)
+	for (index = 0; index <= ((ht->size) - 1); index++)
         {
-		tempNode = ht->array[index];
-		printf("'%s':'%s'", tempNode->key, tempNode->value);
-		c = null_checker(ht, ht->size, index);
-		if (c == 0)
+		if (ht->array[index] != NULL)
 		{
-			if (tempNode->key != NULL)
+			tempNode = ht->array[index];
+			if (null_checker(ht, ht->size, index) <= 0)
 			{
-				printf("'%s':'%s'", tempNode->key, tempNode->value);
+				printf("%s: %s", tempNode->key, tempNode->value);
+				tempNode = tempNode->next;
 			}
-			else
+			else if (null_checker(ht, ht->size, index) > 0)
 			{
-				continue;
+				printf("'%s: %s', ", tempNode->key, tempNode->value);
 			}
-		}
-		else
-		{
-			printf("'%s':'%s', ", tempNode->key, tempNode->value);
 		}
 	}
-	printf("\n");
+	printf("}");
 }
