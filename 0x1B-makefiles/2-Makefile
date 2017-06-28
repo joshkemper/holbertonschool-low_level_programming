@@ -7,9 +7,9 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 main.o: main.c
-	gcc -c main.c
+	gcc -c -o main.o main.c
 
 holberton.o: holberton.c
-	gcc -c holberton.c
+	gcc -c -o holberton.o holberton.c
 clean:
-	rm *.o holberton
+	rm *.o $(NAME)
