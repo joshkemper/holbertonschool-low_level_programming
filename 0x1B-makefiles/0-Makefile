@@ -1,11 +1,13 @@
+CC=gcc
+
 all: holberton.o main.o
-	gcc holberton.o main.o -o holberton
+	$(CC) holberton.o main.o -o holberton
 
 main.o: main.c
-	gcc -c main.c
+	 $(CC) -c main.c
 
 holberton.o: holberton.c m.h
-	gcc -c holberton.c
+	 $(CC) -c holberton.c
 
 clean:
 	rm *.o holberton
