@@ -7,15 +7,12 @@ RM = rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
+clean:
+	$(RM) *~ $(NAME)
+
 oclean:
 	$(RM) -f $(OBJ)
 
-fclean:
-	$(RM) *~ $(NAME)
-	$(RM) $(OBJ)
+fclean: clean oclean
 
-re: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
-
-clean:
-	$(RM) *~ $(NAME)
+re: oclean all
