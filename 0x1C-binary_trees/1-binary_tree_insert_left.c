@@ -4,7 +4,7 @@
 
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
-	binary_tree_t temp;
+	binary_tree_t *temp;
 
 	if (parent->left == NULL)
 	{
