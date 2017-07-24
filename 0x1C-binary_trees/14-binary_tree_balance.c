@@ -13,6 +13,10 @@ int binary_tree_balance(const binary_tree_t *tree)
         temp = tree;
 	count1 = 0;
         count = 0;
+	if (tree == NULL)
+	{
+		return (0);
+	}
         while (temp->left != NULL)
         {
                 temp = temp->left;
