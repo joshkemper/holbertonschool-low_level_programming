@@ -58,6 +58,10 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	unsigned int index;
 	unsigned int number_nodes;
 
+	if (tree == NULL)
+	{
+		return (NULL);
+	}
 	c = 0;
 	index = 0;
 	number_nodes = 0;
