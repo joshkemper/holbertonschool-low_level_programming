@@ -29,12 +29,12 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	{
 		temp = temp->left;
 		count += 1;
-       	}
+	}
 	while (temp1->right != NULL)
-        {
-                temp1 = temp1->right;
-                count1 += 1;
-        }
+	{
+		temp1 = temp1->right;
+		count1 += 1;
+	}
 	if (count1 > count)
 	{
 		return (count1);
