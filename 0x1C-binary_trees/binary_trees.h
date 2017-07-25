@@ -53,4 +53,5 @@ size_t binary_tree_size(const binary_tree_t *tree);
 bool b(const binary_tree_t *tree, unsigned int index, unsigned int nodes);
 size_t binary_tree_size(const binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 #endif
