@@ -10,11 +10,17 @@
 */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t jump, left, right, i;
-	char *text, text1;
+	size_t jump;
+	size_t left;
+	size_t right;
+	size_t i;
+	char *text;
+	char *text1;
 
 	jump = sqrt(size);
-	left, right, i = 0;
+	left = 0;
+	right = 0;
+	i = 0;
 	text = "Value found between indexes";
 	text1 = "Value checked array";
 	while (left < size && array[left] <= value)
