@@ -4,7 +4,9 @@
 
 /**
  * linear_search - Entry point
- *
+ * @array: Array of integers
+ * @size: size of array
+ * @value: value to search for in array
  * Return: Always EXIT_SUCCESS
  */
 
@@ -18,7 +20,7 @@ int linear_search(int *array, size_t size, int value)
 		if (array[i] == value)
 		{
 			printf("Value checked array[%lu] = [%d]\n", i, array[i]);
-			return(i);
+			return (i);
 		}
 		else
 		{
@@ -26,5 +28,5 @@ int linear_search(int *array, size_t size, int value)
 			i++;
 		}
 	}
-	return(-1);
+	return (-1);
 }
