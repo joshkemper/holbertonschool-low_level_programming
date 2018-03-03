@@ -1,3 +1,3 @@
-![alt text](http://i2.wp.com/edlibre.com/new/wp-content/uploads/2015/10/Holberton-School.jpg?resize=520%2C245)
+![alt text](http://www.alloweb.org/wp-content/uploads/2017/11/logo_holberton_school_startup_levee_fonds_alloweb-1.jpg)
 #Low-level programming & Algorithm
 #0x00. C - Hello, World
